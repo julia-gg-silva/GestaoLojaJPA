@@ -26,10 +26,16 @@ public class Cliente {
     @Column(nullable = false)
     private String email;
 
-    @Column(nullable = false, precision = 8)
-    private int telefone;
+    @Column(nullable = false, length = 8)
+    private String telefone;
 
     @Column(nullable = false, length = 11)
     private String cpf;
 
+    public Cliente(String nome, String email, String telefone, String cpf) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.cpf = cpf;
+    }
 }
